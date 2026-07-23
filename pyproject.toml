@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spin_engine"
+version = "0.1.0"
+description = "A modular spin system simulation engine"
+authors = [{name = "Lucas Corbanez", email = "lucascorbanez@gmail.com"}]
+dependencies = [
+    "tensorflow",
+    "numpy",
+    "typing_extensions"
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "mypy",
+    "jupyter",
+    "matplotlib"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
